@@ -3,6 +3,7 @@ import { SelectedPage } from "@/shared/type";
 import ActionButton from "@/shared/ActionButton";
 import Logo from "@/assets/Logo.webp";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { div } from "framer-motion/client";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -13,7 +14,7 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
         {/* Image & Main Header */}
-        <div>
+        <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
             {/* Main Header */}
             <div>
                 {/* Headings */}
@@ -24,7 +25,9 @@ const Home = ({ setSelectedPage }: Props) => {
                             </div>  
                     </div>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error minus aspernatur a pariatur laboriosam quod at necessitatibus repellat vel fugiat nostrum officiis, consequatur nam quidem! Obcaecati animi neque possimus similique.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error minus aspernatur 
+                        a pariatur laboriosam quod at necessitatibus repellat vel fugiat nostrum officiis, 
+                        consequatur nam quidem! Obcaecati animi neque possimus similique.
                     </p>
                 </div>
 
@@ -48,6 +51,19 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img src={Logo} alt="home-pageGraphic" />
             </div>
         </div>
+
+        {/* Sponsors */}
+        {isAboveMediumScreens && (
+            <div>
+            <div>
+                <div className="w-6">
+                    <img className="rounded-full" src={Logo} alt="redbull" />
+                    <img className="rounded-full" src={Logo} alt="forbes" />
+                    <img className="rounded-full" src={Logo} alt="fortune" />
+                </div>
+            </div> 
+            </div>
+        )}
     </section>
   );
 };
