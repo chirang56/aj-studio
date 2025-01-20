@@ -16,15 +16,15 @@ const Home = ({ setSelectedPage }: Props) => {
         {/* Image & Main Header */}
         <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
             {/* Main Header */}
-            <div>
+            <div className="z-10 mt-32 md:basis-3/5 ">
                 {/* Headings */}
-                <div>
-                    <div>
-                        <div>
-                            <img className="rounded-3xl" src={Logo} alt="home-page-text" />
+                <div className="md:-mt-20">
+                    <div className="relative">
+                        <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetxt">
+                            <img className="rounded-3xl w-48" src={Logo} alt="home-page-text" />
                             </div>  
                     </div>
-                    <p>
+                    <p className="mt-8 text-sm">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error minus aspernatur 
                         a pariatur laboriosam quod at necessitatibus repellat vel fugiat nostrum officiis, 
                         consequatur nam quidem! Obcaecati animi neque possimus similique.
@@ -32,7 +32,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 </div>
 
                 {/* Actions */}
-                <div>
+                <div className="mt-8 flex items-center gap-8 md:justify-start">
                     <ActionButton setSelectedPage={setSelectedPage}>
                         Join Now
                     </ActionButton>
@@ -46,9 +46,9 @@ const Home = ({ setSelectedPage }: Props) => {
                 </div>
             </div>
 
-            {/* Image Header */}
-            <div>
-                <img src={Logo} alt="home-pageGraphic" />
+            {/* Image */}
+            <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
+                <img className="w-48 rounded-full" src={Logo} alt="home-pageGraphic" />
             </div>
         </div>
 

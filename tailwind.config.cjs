@@ -26,7 +26,7 @@ export default {
         montserrat: ["Montserrat", "sans-serif"]
       },
       content: {
-        evolvetext: "url('./assets/evolvetxt.png')",
+        evolvetxt: "url('./assets/evolvetxt.webp')",
         abstractwaves: "url('./assets/abswave.png')",
         sparkles: "url('./assets/spark.png')",
         circles: "url('./assets/circle.png')",
