@@ -4,3 +4,9 @@ export enum SelectedPage {
     Services = "services",
     Contact = "contact",
   };
+
+export interface AboutType {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+};
