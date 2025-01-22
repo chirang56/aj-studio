@@ -80,6 +80,29 @@ const Abouts = ({ setSelectedPage }: Props) => {
           />
         ))}
       </motion.div>
+
+      {/* Graphics & Description */}
+      <div>
+        {/* Graphic */}
+        <img src="" alt="" />
+
+        {/* Description */}
+        <div>
+          {/* Title */}
+          <div className="relative">
+            <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+              <div>
+                <HText> Will be interesting collabing with {""}<span className="bg-gradient-to-br from-violet-800 to-rose-600 
+                text-transparent bg-clip-text"> The World. </span> </HText>
+              </div>
+            </div>
+          </div>
+
+          {/* Descript */}
+
+          {/* Button */}
+        </div>
+      </div>
       </motion.div>
     </section>
   );
