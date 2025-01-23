@@ -1,4 +1,5 @@
 import HText from "@/shared/HText";
+import Logo from "@/assets/Logo.webp";
 import { AboutType, SelectedPage } from "@/shared/type";
 import { 
   HomeModernIcon, 
@@ -7,6 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import About from "./About";
+import ActionButton from "@/shared/ActionButton";
 
 const abouts: Array<AboutType> = [
   {
@@ -82,25 +84,58 @@ const Abouts = ({ setSelectedPage }: Props) => {
       </motion.div>
 
       {/* Graphics & Description */}
-      <div>
+      <div className="mt-16 items-center justify-between gap-20 md:mt-24 md:flex">
         {/* Graphic */}
-        <img src="" alt="" />
+        <img className="rounded-b-full mx-auto w-64 " src={Logo} alt="about-page-graphic" />
 
         {/* Description */}
         <div>
           {/* Title */}
           <div className="relative">
             <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
-              <div>
+              <motion.div
+                initial="hidden" 
+                whileInView="visible" 
+                viewport={{ once: true, amount: 0.5 }} 
+                transition={{ duration: 0.5 }} 
+                variants={{ 
+                  hidden: { opacity:0, x: 50}, 
+                  visible: { opacity:1, x: 0},
+                }}
+              >
                 <HText> Will be interesting collabing with {""}<span className="bg-gradient-to-br from-violet-800 to-rose-600 
                 text-transparent bg-clip-text"> The World. </span> </HText>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           {/* Descript */}
+          <motion.div
+            initial="hidden" 
+            whileInView="visible" 
+            viewport={{ once: true, amount: 0.5 }} 
+            transition={{ duration: 0.5 }} 
+            variants={{ 
+              hidden: { opacity:0, x: 50}, 
+              visible: { opacity:1, x: 0},
+            }}
+          >
+            <p className="my-5 "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis soluta, 
+              dolor quae nisi labore molestiae, iste perferendis obcaecati earum est tempora minus voluptate? 
+              Odio ut atque quos magni nisi? 
+            </p>
+            <p className="mb-5"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga cumque assumenda error 
+              reiciendis possimus accusantium nostrum, earum ex quis molestiae tempora dolorem placeat consequuntur 
+              at quas eos ullam illum.
+            </p>
+          </motion.div>
 
           {/* Button */}
+          <div className="relative mt-16">
+            <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+              <ActionButton setSelectedPage={setSelectedPage}> Join Now </ActionButton>
+            </div>
+          </div>
         </div>
       </div>
       </motion.div>

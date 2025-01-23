@@ -27,8 +27,8 @@ export default {
       },
       content: {
         evolvetxt: "url('./assets/evolvetxt.webp')",
-        abstractwaves: "url('./assets/abswave.png')",
-        sparkles: "url('./assets/spark.png')",
+        abstractwaves: "url('./assets/Logo.png')",
+        sparkles: "url('./assets/spark.webp')",
         circles: "url('./assets/circle.png')",
       }
     },
