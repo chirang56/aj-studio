@@ -1,5 +1,6 @@
 import { SelectedPage, ClassType } from '@/shared/type';
 import Logo from "@/assets/Logo.webp";
+import Image from "@/assets/Image.png";
 import { motion } from 'framer-motion';
 import HText from '@/shared/HText';
 import Service from "./Service";
@@ -18,12 +19,22 @@ const services: Array<ClassType> = [
     {
         name: "Mobile App Solutions",
         description:"Lorem ipsum jackey happy map in the end of the",
-        image: Logo,
+        image: Image,
     },
     {
         name: "Web Development",
         description:"Lorem ipsum jackey happy map in the end of the",
-        image: Logo,
+        image: Image,
+    },
+    {
+        name: "Graphic Designing",
+        description:"Lorem ipsum jackey happy map in the end of the",
+        image: Image,
+    },
+    {
+        name: "Mobile App Solutions",
+        description:"Lorem ipsum jackey happy map in the end of the",
+        image: Image,
     },
     {
         name: "Graphic Designing",

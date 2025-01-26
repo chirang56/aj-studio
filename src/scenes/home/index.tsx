@@ -2,6 +2,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/type";
 import ActionButton from "@/shared/ActionButton";
 import Logo from "@/assets/Logo.webp";
+import Image from "@/assets/Image.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { div } from "framer-motion/client";
 import { motion } from "framer-motion";
@@ -67,7 +68,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
             {/* Image */}
             <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
-                <img className="w-48 rounded-full" src={Logo} alt="home-pageGraphic" />
+                <img className="w-64 rounded-full" src={Image} alt="home-pageGraphic" />
             </div>
         </motion.div>
 

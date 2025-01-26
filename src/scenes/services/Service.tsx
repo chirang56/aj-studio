@@ -1,4 +1,3 @@
-import Logo from "@/assets/Logo.webp";
 type Props = {
     name: string;
     description?: string;
@@ -17,7 +16,7 @@ const Service = ({ name, description, image }: Props) => {
             <p className="text-violet-600 text-2xl"> {name} </p>
             <p className="mt-0.5"> {description} </p>
         </div>
-        <img className= "" src={Logo} alt={`${Logo}`} />
+        <img className= "" src={image} alt={`${image}`} />
     </li>
   );
 };
