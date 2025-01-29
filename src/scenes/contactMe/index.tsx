@@ -9,6 +9,7 @@ type Props = {
 };
 
 const ContactMe = ({ setSelectedPage }: Props) => {
+  const inputStyles = `w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
   const {
     register, trigger, formState: { errrors }
@@ -61,11 +62,10 @@ const ContactMe = ({ setSelectedPage }: Props) => {
             target="_blank" 
             onSubmit={onSubmit}
             method="POST"
-            action="https://formsubmit.co/your@email.com">
-              <input type="" className="w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white" />
+            action="https://formsubmit.co/ivijnarihcmtg0810@gmail.com">
+              <input className= {inputStyles} type="text" placeholder="NAME" {...register("name", { required: true, maxLength: 100, })} />
             </form>
           </motion.div>
-          <p className="mt-10 justify-between gap-8 md:flex text-center"> Contact Me </p>
         </div>
       </motion.div>
     </section>
