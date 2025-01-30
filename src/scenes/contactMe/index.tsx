@@ -1,6 +1,7 @@
 import HText from "@/shared/HText";
 import { SelectedPage } from "@/shared/type";
 import { motion } from "framer-motion";
+import { p } from "framer-motion/client";
 import { useForm } from "react-hook-form";
 
 
@@ -12,7 +13,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
   const inputStyles = `w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
   const {
-    register, trigger, formState: { errrors }
+    register, trigger, formState: { errors }
   } = useForm();
   
   const onSubmit = async (e: any) => {
@@ -23,7 +24,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
   }
 
   return (
-    <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32"> 
+    <section id="contactme" className="mx-auto w-5/6 pt-24 pb-32"> 
       <motion.div 
             onViewportEnter={() => setSelectedPage(SelectedPage.ContactMe)}>
         {/* Header */}
@@ -61,9 +62,49 @@ const ContactMe = ({ setSelectedPage }: Props) => {
             <form 
             target="_blank" 
             onSubmit={onSubmit}
-            method="POST"
-            action="https://formsubmit.co/ivijnarihcmtg0810@gmail.com">
-              <input className= {inputStyles} type="text" placeholder="NAME" {...register("name", { required: true, maxLength: 100, })} />
+            action="https://formsubmit.co/ivijnarihcmtg0810@gmail.com"
+            method="POST">
+              <input className= {inputStyles} 
+                type="text" 
+                placeholder="NAME" 
+                {...register("name", {
+                  required: true, 
+                  maxLength: 100, 
+                })} />
+              {errors.name && (
+                <p className="mt-1 text-primary-500">
+                  {errors.name.type === "required" && "This field is required."}
+                  {errors.name.type === "maxLength" && "Max Length is 100 Char."}
+                </p>
+              )}
+
+              <input className= {inputStyles} 
+                type="text" 
+                placeholder="EMAIL" 
+                {...register("email", {
+                  required: true, 
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                })} />
+              {errors.email && (
+                <p className="mt-1 text-primary-500">
+                  {errors.email.type === "required" && "This field is required."}
+                  {errors.email.type === "pattern" && "Invalid E-mail Address."}
+                </p>
+              )}
+
+              <input className= {inputStyles} 
+                type="text" 
+                placeholder="MESSAGE" 
+                {...register("message", {
+                  required: true, 
+                  maxLength: 2000,
+                })} />
+              {errors.message && (
+                <p className="mt-1 text-primary-500">
+                  {errors.message.type === "required" && "This field is required."}
+                  {errors.message.type === "maxLength" && "Max Length is 2000 Char."}
+                </p>
+              )}
             </form>
           </motion.div>
         </div>
