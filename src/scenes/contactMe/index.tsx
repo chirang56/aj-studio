@@ -3,6 +3,7 @@ import { SelectedPage } from "@/shared/type";
 import { motion } from "framer-motion";
 import { p } from "framer-motion/client";
 import { useForm } from "react-hook-form";
+import Logo from "@/assets/Logo.webp";
 
 
 type Props = {
@@ -62,7 +63,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
             <form 
             target="_blank" 
             onSubmit={onSubmit}
-            action="https://formsubmit.co/ivijnarihcmtg0810@gmail.com"
+            action="https://formsubmit.co/your@email.com"
             method="POST">
               <input className= {inputStyles} 
                 type="text" 
@@ -92,9 +93,10 @@ const ContactMe = ({ setSelectedPage }: Props) => {
                 </p>
               )}
 
-              <input className= {inputStyles} 
-                type="text" 
-                placeholder="MESSAGE" 
+              <textarea className= {inputStyles} 
+                placeholder="MESSAGE"
+                rows={4}
+                cols={50}
                 {...register("message", {
                   required: true, 
                   maxLength: 2000,
@@ -113,6 +115,21 @@ const ContactMe = ({ setSelectedPage }: Props) => {
                 SUBMIT
               </button>
             </form>
+          </motion.div>
+
+          <motion.div 
+            className="relative mt-16 basis-2/5 md:mt-0"
+            initial="hidden" 
+            whileInView="visible" 
+            viewport={{ once: true, amount: 0.5 }} 
+            transition={{ delay: 0.2, duration: 0.5 }} 
+            variants={{
+              hidden: { opacity:0, x: 50}, 
+              visible: { opacity:1, x: 0},
+          }}>
+            <div className="md:before:content-evolvetext w-80 before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+              <img className="rounded-3xl ml-36" src={Logo} alt="Logo" />
+            </div>
           </motion.div>
         </div>
       </motion.div>
