@@ -4,7 +4,6 @@ import ActionButton from "@/shared/ActionButton";
 import Logo from "@/assets/Logo.webp";
 import Image from "@/assets/Image.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { div } from "framer-motion/client";
 import { motion } from "framer-motion";
 
 type Props = {
