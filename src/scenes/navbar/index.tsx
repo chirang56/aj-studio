@@ -4,7 +4,6 @@ import Logo from "@/assets/Logo.webp";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/type";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { div } from "framer-motion/client";
 import ActionButton from "@/shared/ActionButton";
 
 type Props = {
@@ -52,7 +51,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                   setSelectedPage={setSelectedPage}
                 />
                 <Link 
-                  page="Contact"
+                  page="Contact Me"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
@@ -104,7 +103,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                   setSelectedPage={setSelectedPage}
                 />
                 <Link 
-                  page="Contact"
+                  page="Contact Me"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />

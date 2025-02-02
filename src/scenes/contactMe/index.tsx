@@ -1,10 +1,8 @@
-import HText from "@/shared/HText";
+import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/shared/type";
 import { motion } from "framer-motion";
-import { p } from "framer-motion/client";
-import { useForm } from "react-hook-form";
 import Logo from "@/assets/Logo.webp";
-
+import HText from "@/shared/HText";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -22,7 +20,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
     if (!isValid) {
       e.preventDefault();
     }
-  }
+  };
 
   return (
     <section id="contactme" className="mx-auto w-5/6 pt-24 pb-32"> 
@@ -40,7 +38,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
             visible: { opacity:1, x: 0},
           }}
         >
-           <HText> <span className="text-primary-500"> Join Now </span> </HText>
+           <HText> <span className="text-primary-500"> Join Now </span> To Collaborate </HText>
            <p className="my-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Distinctio tempore ratione dolor, dolorem ad, quia beatae illum deleniti quam 
             necessitatibus eveniet culpa cupiditate libero, labore obcaecati? Doloremque 

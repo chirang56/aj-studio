@@ -28,7 +28,7 @@ function App() {
   return (
       <div className="app bg-stone-200">
         <Navbar
-            isTopOfPage={isTopOfPage}
+          isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
@@ -37,7 +37,7 @@ function App() {
         <About setSelectedPage={setSelectedPage}/>
         <Service setSelectedPage={setSelectedPage}/>
         <ContactMe setSelectedPage={setSelectedPage}/>
-        <Footer setSelectedPage={setSelectedPage}/>
+        <Footer/>
       </div>
   );
 };
