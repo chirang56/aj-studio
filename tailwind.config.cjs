@@ -33,8 +33,8 @@ export default {
       },
     },
     screens: {
-      xs: "480px",
-      sm: "768px",
+      xs: "320px",
+      sm: "510px",
       md: "1060px",
     },
   },
